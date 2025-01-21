@@ -6,7 +6,11 @@ type UserData = {
   age: number;
   status: boolean;
 };
-// New State
+
+// interface User {
+//   name: string;
+//   age: number;
+// }
 
 const UseState = () => {
   //   const [name, setName] = useState<string>("John Doe");
