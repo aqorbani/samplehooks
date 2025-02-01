@@ -8,6 +8,7 @@ import UseLayoutEffect from "@/components/sampleHooks/UseLayoutEffect";
 import UseReducer from "@/components/sampleHooks/UseReducer";
 import UseRef from "@/components/sampleHooks/UseRef";
 import UseRef2 from "@/components/sampleHooks/UseRef2";
+import UseRef3 from "@/components/sampleHooks/UseRef3";
 
 export default function Home() {
   // const { user, login, logout } = useUser();
@@ -24,7 +25,8 @@ export default function Home() {
       {/* <UseLayoutEffect /> */}
       {/* <UseReducer /> */}
       {/* <UseRef /> */}
-      <UseRef2 value={4} />
+      {/* <UseRef2 value={4} /> */}
+      <UseRef3 />
     </div>
   );
 }
