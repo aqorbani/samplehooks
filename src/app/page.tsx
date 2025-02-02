@@ -1,15 +1,15 @@
-"use client";
 import UseEffect from "@/components/sampleHooks/UseEffect";
 import UseState from "@/components/sampleHooks/UseState";
 import UseEffect2 from "@/components/sampleHooks/UseEffect2";
 import { useUser } from "@/components/sampleHooks/UseContext/UserContext";
-import { useEffect } from "react";
 import UseLayoutEffect from "@/components/sampleHooks/UseLayoutEffect";
 import UseReducer from "@/components/sampleHooks/UseReducer";
 import UseRef from "@/components/sampleHooks/UseRef";
 import UseRef2 from "@/components/sampleHooks/UseRef2";
 import UseRef3 from "@/components/sampleHooks/UseRef3";
 import UseId from "@/components/sampleHooks/UseId";
+import UseCallBack from "@/components/sampleHooks/UseCallBack/UseCallBack";
+import Parent from "@/components/sampleHooks/Memoization/memo/Parent";
 
 export default function Home() {
   // const { user, login, logout } = useUser();
@@ -28,7 +28,9 @@ export default function Home() {
       {/* <UseRef /> */}
       {/* <UseRef2 value={4} /> */}
       {/* <UseRef3 /> */}
-      <UseId />
+      {/* <UseId /> */}
+      {/* <UseCallBack /> */}
+      <Parent />
     </div>
   );
 }
