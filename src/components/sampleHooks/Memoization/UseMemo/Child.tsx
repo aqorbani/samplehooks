@@ -1,3 +1,5 @@
+import React, { memo } from "react";
+
 interface Props {
   number?: number;
 }
@@ -7,4 +9,4 @@ const Child: React.FC<Props> = ({ number }) => {
   return <div>Child:{number}</div>;
 };
 
-export default Child;
+export default memo(Child);

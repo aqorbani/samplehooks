@@ -8,8 +8,7 @@ import UseRef from "@/components/sampleHooks/UseRef";
 import UseRef2 from "@/components/sampleHooks/UseRef2";
 import UseRef3 from "@/components/sampleHooks/UseRef3";
 import UseId from "@/components/sampleHooks/UseId";
-import UseCallBack from "@/components/sampleHooks/UseCallBack/UseCallBack";
-import Parent from "@/components/sampleHooks/Memoization/UseMemo/Parent";
+import Parent from "@/components/sampleHooks/UseCallBack/sample01/Parent";
 
 export default function Home() {
   // const { user, login, logout } = useUser();
