@@ -9,6 +9,7 @@ import UseRef2 from "@/components/sampleHooks/UseRef2";
 import UseRef3 from "@/components/sampleHooks/UseRef3";
 import UseId from "@/components/sampleHooks/UseId";
 import Parent from "@/components/sampleHooks/UseCallBack/sample01/Parent";
+import UseTransition from "@/components/sampleHooks/UseTransitions";
 
 export default function Home() {
   // const { user, login, logout } = useUser();
@@ -29,7 +30,8 @@ export default function Home() {
       {/* <UseRef3 /> */}
       {/* <UseId /> */}
       {/* <UseCallBack /> */}
-      <Parent />
+      {/* <Parent /> */}
+      <UseTransition />
     </div>
   );
 }
