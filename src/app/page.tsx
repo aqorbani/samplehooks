@@ -12,6 +12,7 @@ import Parent from "@/components/sampleHooks/UseCallBack/sample01/Parent";
 import UseTransition from "@/components/sampleHooks/UseTransitions";
 import UseDeferredValue from "@/components/sampleHooks/UseDeferredValue/UseDeferredValue";
 import UseActionState from "@/components/sampleHooks/UseActionState/UseActionState";
+import UseDebugValue from "@/components/sampleHooks/UseDebugValue/UseDebugValue";
 
 export default function Home() {
   // const { user, login, logout } = useUser();
@@ -35,7 +36,8 @@ export default function Home() {
       {/* <Parent /> */}
       {/* <UseTransition /> */}
       {/* <UseDeferredValue /> */}
-      <UseActionState />
+      {/* <UseActionState /> */}
+      <UseDebugValue />
     </div>
   );
 }
