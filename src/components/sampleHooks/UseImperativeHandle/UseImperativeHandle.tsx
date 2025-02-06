@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import Input from "./Input";
 
 const UseImperativeHandle = () => {
-  const ref = useRef<any>(null);
+  const ref = useRef<HTMLInputElement | any>(null);
 
   function handleClick() {
     if (ref.current !== null) {
