@@ -13,6 +13,7 @@ import UseTransition from "@/components/sampleHooks/UseTransitions";
 import UseDeferredValue from "@/components/sampleHooks/UseDeferredValue/UseDeferredValue";
 import UseActionState from "@/components/sampleHooks/UseActionState/UseActionState";
 import UseDebugValue from "@/components/sampleHooks/UseDebugValue/UseDebugValue";
+import UseImperativeHandle from "@/components/sampleHooks/UseImperativeHandle/UseImperativeHandle";
 
 export default function Home() {
   // const { user, login, logout } = useUser();
@@ -37,7 +38,8 @@ export default function Home() {
       {/* <UseTransition /> */}
       {/* <UseDeferredValue /> */}
       {/* <UseActionState /> */}
-      <UseDebugValue />
+      {/* <UseDebugValue /> */}
+      <UseImperativeHandle />
     </div>
   );
 }
