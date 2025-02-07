@@ -16,6 +16,7 @@ import UseDebugValue from "@/components/sampleHooks/UseDebugValue/UseDebugValue"
 import UseImperativeHandle from "@/components/sampleHooks/UseImperativeHandle/UseImperativeHandle";
 import UseInsertionEffect from "@/components/sampleHooks/UseInsertionEffect";
 import UseSyncExternalStore from "@/components/sampleHooks/UseSyncExternalStore";
+import UseOptimistic from "@/components/sampleHooks/UseOptimistic/UseOptimistic";
 
 export default function Home() {
   // const { user, login, logout } = useUser();
@@ -43,7 +44,8 @@ export default function Home() {
       {/* <UseDebugValue /> */}
       {/* <UseImperativeHandle /> */}
       {/* <UseInsertionEffect /> */}
-      <UseSyncExternalStore />
+      {/* <UseSyncExternalStore /> */}
+      <UseOptimistic />
     </div>
   );
 }
