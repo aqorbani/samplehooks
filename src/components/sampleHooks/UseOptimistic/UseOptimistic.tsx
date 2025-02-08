@@ -12,9 +12,7 @@ function Thread({
   const formRef = useRef<any>(null);
   async function formAction(formData: any) {
     addOptimisticMessage(formData.get("message"));
-    if (formRef.current !== null) {
-      formRef.current.reset();
-    }
+    formRef.current.reset();
     await sendMessage(formData);
   }
   const [optimisticMessages, addOptimisticMessage] = useOptimistic(
@@ -52,7 +50,6 @@ function Thread({
 }
 
 const UseOptimistic = () => {
-
   const [messages, setMessages] = useState([
     { text: "Hello there!", sending: false, key: 1 },
   ]);
@@ -61,7 +58,7 @@ const UseOptimistic = () => {
     const sentMessage = await deliverMessage(formData.get("message"));
     setMessages((messages: any) => [...messages, { text: sentMessage }]);
   }
-  
+
   return <Thread messages={messages} sendMessage={sendMessage} />;
 };
 
