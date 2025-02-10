@@ -19,6 +19,7 @@ import UseSyncExternalStore from "@/components/sampleHooks/UseSyncExternalStore"
 import UseOptimistic from "@/components/sampleHooks/UseOptimistic/UseOptimistic";
 import UseFormStatus from "@/components/sampleHooks/UseFormStatus/UseFormStatus";
 import UseAPI from "@/components/react19/use/UseAPI";
+import UseStreamingData from "@/components/react19/use2/UseStreamingData";
 
 export default function Home() {
   // const { user, login, logout } = useUser();
@@ -49,7 +50,8 @@ export default function Home() {
       {/* <UseSyncExternalStore /> */}
       {/* <UseOptimistic /> */}
       {/* <UseFormStatus /> */}
-      <UseAPI />
+      {/* <UseAPI /> */}
+      <UseStreamingData />
     </div>
   );
 }
