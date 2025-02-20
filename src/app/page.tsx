@@ -21,7 +21,7 @@ import UseFormStatus from "@/components/sampleHooks/UseFormStatus/UseFormStatus"
 import UseAPI from "@/components/react19/use/UseAPI";
 import UseStreamingData from "@/components/react19/use2/UseStreamingData";
 import Server from "@/components/react19/server/Server";
-import CookieComponent from "@/components/test/CookieComponent";
+import LocalStorage from "@/components/Storage/localstorage/LocalStorage";
 
 export default function Home() {
   // const { user, login, logout } = useUser();
@@ -55,7 +55,8 @@ export default function Home() {
       {/* <UseAPI /> */}
       {/* <UseStreamingData /> */}
       {/* <Server /> */}
-      <CookieComponent />
+      {/* <CookieComponent /> */}
+      <LocalStorage />
     </div>
   );
 }
