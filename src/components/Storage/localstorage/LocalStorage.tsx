@@ -16,6 +16,7 @@ const LocalStorage = () => {
   async function deleteLocalStorageHandler() {
     localStorage.removeItem("test");
     setData("");
+    setKey("");
   }
 
   async function clearLocalStorageHandler() {
