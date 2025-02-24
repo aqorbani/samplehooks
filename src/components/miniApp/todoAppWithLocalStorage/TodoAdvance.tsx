@@ -1,14 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-const Todo = () => {
-  const [todos, setTodos] = useState<string[]>([]);
-  const [task, setTask] = useState<string>("");
+const TodoAdvance = () => {
+  const [todos, setTodos] = useState([]);
+  const [task, setTask] = useState("");
 
   useEffect(() => {
-    const storedTodos: string[] = JSON.parse(
-      localStorage.getItem("todos") || ""
-    );
+    const storedTodos = JSON.parse(localStorage.getItem("todos") as any);
     if (storedTodos) {
       setTodos(storedTodos);
     }
@@ -20,12 +18,12 @@ const Todo = () => {
 
   const handleAddTodo = () => {
     if (task.trim() !== "") {
-      setTodos([...todos, task]);
+      setTodos([...todos, task] as any);
       setTask("");
     }
   };
 
-  const handleRemoveTodo = (index: number) => {
+  const handleRemoveTodo = (index: any) => {
     const newTodos = todos.filter((_, i) => i !== index);
     setTodos(newTodos);
   };
@@ -45,7 +43,7 @@ const Todo = () => {
           Add
         </button>
       </div>
-      <ul className="flex flex-col-reverse">
+      <ul>
         {todos.map((todo, index) => (
           <li key={index} className="flex mb-2">
             <div className="bg-red-100 w-full p-1">{todo}</div>
@@ -62,4 +60,4 @@ const Todo = () => {
   );
 };
 
-export default Todo;
+export default TodoAdvance;
