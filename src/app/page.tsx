@@ -24,6 +24,7 @@ import Server from "@/components/react19/server/Server";
 import LocalStorage from "@/components/Storage/localstorage/LocalStorage";
 import SessionStorage from "@/components/Storage/sessionStorage/SessionStorage";
 import Todo from "@/components/miniApp/todoAppWithLocalStorage/Todo";
+import TodoAdvance from "@/components/miniApp/todoAppWithLocalStorage/TodoAdvance";
 
 export default function Home() {
   // const { user, login, logout } = useUser();
@@ -60,7 +61,8 @@ export default function Home() {
       {/* <CookieComponent /> */}
       {/* <LocalStorage /> */}
       {/* <SessionStorage /> */}
-      <Todo />
+      {/* <Todo /> */}
+      <TodoAdvance />
     </div>
   );
 }

@@ -1,12 +1,17 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
+interface Todo {
+  text: string;
+  status: boolean;
+}
+
 const TodoAdvance = () => {
-  const [todos, setTodos] = useState([]);
-  const [task, setTask] = useState("");
+  const [todos, setTodos] = useState<Todo[]>([]);
+  const [task, setTask] = useState<string>("");
 
   useEffect(() => {
-    const storedTodos = JSON.parse(localStorage.getItem("todos") as any);
+    const storedTodos: Todo[] = JSON.parse(localStorage.getItem("todos") as any);
     if (storedTodos) {
       setTodos(storedTodos);
     }
@@ -18,7 +23,7 @@ const TodoAdvance = () => {
 
   const handleAddTodo = () => {
     if (task.trim() !== "") {
-      setTodos([...todos, task] as any);
+      setTodos([...todos, { text: task, status: false }]);
       setTask("");
     }
   };
@@ -46,7 +51,7 @@ const TodoAdvance = () => {
       <ul>
         {todos.map((todo, index) => (
           <li key={index} className="flex mb-2">
-            <div className="bg-red-100 w-full p-1">{todo}</div>
+            <div className="bg-red-100 w-full p-1">{todo.text}</div>
             <button
               onClick={() => handleRemoveTodo(index)}
               className="bg-red-600 text-white p-1"
