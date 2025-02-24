@@ -23,6 +23,7 @@ import UseStreamingData from "@/components/react19/use2/UseStreamingData";
 import Server from "@/components/react19/server/Server";
 import LocalStorage from "@/components/Storage/localstorage/LocalStorage";
 import SessionStorage from "@/components/Storage/sessionStorage/SessionStorage";
+import Todo from "@/components/miniApp/todoAppWithLocalStorage/Todo";
 
 export default function Home() {
   // const { user, login, logout } = useUser();
@@ -58,7 +59,8 @@ export default function Home() {
       {/* <Server /> */}
       {/* <CookieComponent /> */}
       {/* <LocalStorage /> */}
-      <SessionStorage />
+      {/* <SessionStorage /> */}
+      <Todo />
     </div>
   );
 }
