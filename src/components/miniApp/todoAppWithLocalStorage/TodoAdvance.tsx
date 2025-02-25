@@ -11,7 +11,9 @@ const TodoAdvance = () => {
   const [task, setTask] = useState<string>("");
 
   useEffect(() => {
-    const storedTodos: Todo[] = JSON.parse(localStorage.getItem("todos") as any);
+    const storedTodos: Todo[] = JSON.parse(
+      localStorage.getItem("todos") as any
+    );
     if (storedTodos) {
       setTodos(storedTodos);
     }
@@ -28,8 +30,18 @@ const TodoAdvance = () => {
     }
   };
 
-  const handleRemoveTodo = (index: any) => {
+  const handleRemoveTodo = (index: number) => {
     const newTodos = todos.filter((_, i) => i !== index);
+    setTodos(newTodos);
+  };
+
+  const handleStatusTodo = (index: number) => {
+    let newTodos: Todo[] = JSON.parse(JSON.stringify(todos));
+    let todo: Todo | undefined = newTodos.find((_, i) => i === index);
+    if (todo) {
+      todo?.status === true ? (todo.status = false) : (todo.status = true);
+    }
+    newTodos.fill(todo as Todo, index, index + 1);
     setTodos(newTodos);
   };
 
@@ -51,7 +63,15 @@ const TodoAdvance = () => {
       <ul>
         {todos.map((todo, index) => (
           <li key={index} className="flex mb-2">
-            <div className="bg-red-100 w-full p-1">{todo.text}</div>
+            <div className="bg-gray-100 w-full p-1">
+              {todo.text}({todo.status === true ? "انجام شده" : "انجام نشده"})
+            </div>
+            <button
+              onClick={() => handleStatusTodo(index)}
+              className="bg-purple-600 text-white p-1"
+            >
+              Change
+            </button>
             <button
               onClick={() => handleRemoveTodo(index)}
               className="bg-red-600 text-white p-1"
