@@ -36,7 +36,8 @@ const TodoAdvance = () => {
   };
 
   const handleStatusTodo = (index: number) => {
-    let newTodos: Todo[] = JSON.parse(JSON.stringify(todos));
+    // let newTodos: Todo[] = JSON.parse(JSON.stringify(todos));
+    let newTodos: Todo[] = todos.map(a => {return {...a}})
     let todo: Todo | undefined = newTodos.find((_, i) => i === index);
     if (todo) {
       todo?.status === true ? (todo.status = false) : (todo.status = true);

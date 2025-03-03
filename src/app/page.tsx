@@ -25,6 +25,7 @@ import LocalStorage from "@/components/Storage/localstorage/LocalStorage";
 import SessionStorage from "@/components/Storage/sessionStorage/SessionStorage";
 import Todo from "@/components/miniApp/todoAppWithLocalStorage/Todo";
 import TodoAdvance from "@/components/miniApp/todoAppWithLocalStorage/TodoAdvance";
+import WebComponent from "@/components/miniApp/webComponent/WebComponent";
 
 export default function Home() {
   // const { user, login, logout } = useUser();
@@ -62,7 +63,8 @@ export default function Home() {
       {/* <LocalStorage /> */}
       {/* <SessionStorage /> */}
       {/* <Todo /> */}
-      <TodoAdvance />
+      {/* <TodoAdvance /> */}
+      <WebComponent />
     </div>
   );
 }
