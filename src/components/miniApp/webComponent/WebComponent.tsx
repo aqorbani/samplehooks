@@ -1,10 +1,21 @@
 "use client";
 import React, { useEffect } from "react";
 
-declare module "react" {
+// declare module "react" {
+//   namespace JSX {
+//     interface IntrinsicElements {
+//       "button-x": any
+//     }
+//   }
+// }
+
+declare module 'react' {
   namespace JSX {
     interface IntrinsicElements {
-      "button-x": any
+      "button-x": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
+        color?: string;
+        label?: string;
+      };
     }
   }
 }
